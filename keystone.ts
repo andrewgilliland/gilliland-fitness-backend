@@ -1,5 +1,6 @@
 import "dotenv/config";
 import { config, createSchema } from "@keystone-next/keystone/schema";
+import { User } from "./schemas/User";
 
 const databaseURL =
   process.env.DATABASE_URL || "mongodb://localhost/gilliland-fitness";
@@ -23,6 +24,7 @@ export default config({
   },
   lists: createSchema({
     // SChema items go in here
+    User,
   }),
   ui: {
     // TODO: change this for roles
