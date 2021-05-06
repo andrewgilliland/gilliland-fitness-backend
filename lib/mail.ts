@@ -56,6 +56,6 @@ export async function sendPasswordResetEmail(
   })) as MailResponse;
 
   if (process.env.MAIL_USER.includes("ethereal.email")) {
-    console.log(`Message Sent! Preview it at ${getTestMessageUrl(info)}`);
+    console.log(`Message Sent! Preview it at ${getTestMessageUrl (info)}`);
   }
 }
